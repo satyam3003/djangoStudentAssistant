@@ -1,0 +1,12 @@
+{% extends "course/base.html" %}
+{% block content %}
+    <h1> {{ course.first.course.course_name }}</h1>
+
+    {% for co in course %}
+        <h3>{{ co.lec_num }}</h3>
+
+        <h4><a href="{% url 'lecture' co.id %}">Link</a></h4>
+        <h4>{{ co.lec_date_time }}</h4>
+    {% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends "course/base.html" %}
+{% block content %}
+    <div class="container">
+        <h1>{{ user.username }}</h1>
+    </div>
+    {% for subscribed_course in all_subscribed_courses %}
+        {{ subscribed_course.course_name }}
+        - {{ subscribed_course.course_code }} - {{ subscribed_course.course_abbriv }}  <a href="{% url 'course' subscribed_course.course_code  %}">link</a><br>
+    {% endfor %}
+
+{% endblock content %}

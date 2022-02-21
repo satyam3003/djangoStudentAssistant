@@ -1,0 +1,7 @@
+{% extends "course/base.html" %}
+{% block content %}
+    <h1> {{ lecture.lec_num }}</h1>
+
+<iframe width="100%" height="500px" src="{{ lecture.lec_link }}"></iframe>
+
+{% endblock content %}
